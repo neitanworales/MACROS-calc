@@ -1,7 +1,10 @@
+import { Unidad } from "./Unidad";
+
 export class Food {
     nombre!: string;
-    base!: number;
-    grasa!: number;
-    carbohidrato!: number;
-    proteina!: number;
+    cantidad!: number;
+    unidad!: Unidad;
+    grasa: number = 0;
+    carbohidrato: number = 0;
+    proteina: number = 0;
 }

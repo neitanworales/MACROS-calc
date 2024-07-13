@@ -1,0 +1,156 @@
+{
+    "foods": [
+        {
+            "nombre": "Zucaritas",
+            "cantidad": "100",
+            "unidad": "g",
+            "grasa": "0.8",
+            "carbohidrato": "89.9",
+            "proteina": "4.5"
+        },
+        {
+            "nombre": "Leche descremada LALA",
+            "cantidad": "250",
+            "unidad": "ml",
+            "grasa": "1.3",
+            "carbohidrato": "12",
+            "proteina": "7.8"
+        },
+        {
+            "nombre": "Plátano",
+            "cantidad": "100",
+            "unidad": "g",
+            "grasa": "0.3",
+            "carbohidrato": "21.1",
+            "proteina": "1.1"
+        },
+        {
+            "nombre": "Pollo asado",
+            "cantidad": "100",
+            "unidad": "g",
+            "grasa": "13.49",
+            "carbohidrato": "0",
+            "proteina": "27.7"
+        },
+        {
+            "nombre": "Panini Español de Costco",
+            "cantidad": "100",
+            "unidad": "g",
+            "grasa": "17.80",
+            "carbohidrato": "19",
+            "proteina": "17"
+        },
+        {
+            "nombre": "Apio",
+            "cantidad": "100",
+            "unidad": "g",
+            "grasa": "0",
+            "carbohidrato": "0",
+            "proteina": "1"
+        },
+        {
+            "nombre": "Galleta Principe",
+            "cantidad": "100",
+            "unidad": "g",
+            "grasa": "20.6",
+            "carbohidrato": "68.2",
+            "proteina": "5.3"
+        },
+        {
+            "nombre": "Jamón de pechuga de pavo San Rafael",
+            "cantidad": "100",
+            "unidad": "g",
+            "grasa": "0.9",
+            "carbohidrato": "8",
+            "proteina": "15.5"
+        },
+        {
+            "nombre": "Jamón de pierna de cerdo Santa Lucia YORK",
+            "cantidad": "100",
+            "unidad": "g",
+            "grasa": "1.31",
+            "carbohidrato": "3.22",
+            "proteina": "14.66"
+        },
+        {
+            "nombre": "Pan Bimbo Natural 2 Rebanadas",
+            "cantidad": "2",
+            "unidad": "pieza",
+            "grasa": "0.6",
+            "carbohidrato": "22",
+            "proteina": "8.1"
+        },
+        {
+            "nombre": "Mayonesa McCormick",
+            "cantidad": "100",
+            "unidad": "g",
+            "grasa": "81",
+            "carbohidrato": "2",
+            "proteina": "1.3"
+        },
+        {
+            "nombre": "Leche Almendra Silka Sin azucar",
+            "cantidad": "100",
+            "unidad": "ml",
+            "grasa": "0.9",
+            "carbohidrato": "0.4",
+            "proteina": "0.4"
+        },
+        {
+            "nombre": "Proteína Costco 2 medidas",
+            "cantidad": "2",
+            "unidad": "medida",
+            "grasa": "4.5",
+            "carbohidrato": "9",
+            "proteina": "21"
+        },
+        {
+            "nombre": "Nescafé de olla",
+            "cantidad": "1",
+            "unidad": "cucharada",
+            "grasa": "0.01",
+            "carbohidrato": "0.12",
+            "proteina": "0.11"
+        },
+        {
+            "nombre": "Tortillinas Tía Rosa",
+            "cantidad": "100",
+            "unidad": "g",
+            "grasa": "10.5",
+            "carbohidrato": "44.8",
+            "proteina": "7.7"
+        },
+        {
+            "nombre": "Huevo revuelto solo",
+            "cantidad": "50",
+            "unidad": "g",
+            "grasa": "4.8",
+            "carbohidrato": "0.4",
+            "proteina": "6.3"
+        },
+        {
+            "nombre": "Manzana Golden de Walmart",
+            "cantidad": "1",
+            "unidad": "pieza",
+            "grasa": "0.23",
+            "carbohidrato": "19.06",
+            "proteina": "0.36"
+        },
+        {
+            "nombre": "Bisctec de Res - Pulpa blanca",
+            "cantidad": "100",
+            "unidad": "g",
+            "grasa": "4.62",
+            "carbohidrato": "0",
+            "proteina": "21.91"
+        },
+        {
+            "nombre": "Nopal",
+            "cantidad": "100",
+            "unidad": "g",
+            "grasa": "0.1",
+            "carbohidrato": "3.3",
+            "proteina": "1.4"
+        }
+    ]
+}
