@@ -28,31 +28,36 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         echo json_encode($response);
     }
 } 
-/*else if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+else if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $inputJSON = file_get_contents('php://input');
     $input = json_decode($inputJSON, TRUE);
 
     $correcto = true;
-    $datosIncorrectos = " Hace falta: titulo o tema_id";
-    if (empty($input['titulo']) || empty($input['tema_id'])) {
+    $datosIncorrectos = " Hace falta uno o varios campos";
+    if (empty($input['nombre']) 
+    || empty($input['cantidad'])
+    || empty($input['unidad'])) {
         $correcto = false;
     }
 
     if ($correcto) {
+        $nombre = !empty($input['nombre']) ? $input['nombre'] : null;
+        $cantidad = !empty($input['cantidad']) ? $input['cantidad'] : null;
+        $unidad = !empty($input['unidad']) ? $input['unidad'] : null;
+        $grasa = !empty($input['grasa']) ? $input['grasa'] : null;
+        $carbohidrato = !empty($input['carbohidrato']) ? $input['carbohidrato'] : null;
+        $proteina = !empty($input['proteina']) ? $input['proteina'] : null;
+        $marca = !empty($input['marca']) ? $input['marca'] : null;
 
-        $titulo = !empty($input['titulo']) ? $input['titulo'] : null;
-        $descripcion = !empty($input['descripcion']) ? $input['descripcion'] : null;
-        $tema_id = !empty($input['tema_id']) ? $input['tema_id'] : null;
-
-        if ($datos->guardarTema($tema_id, $titulo, $descripcion)) {
+        if ($datos->insertFood($nombre, $cantidad, $unidad, $grasa, $carbohidrato, $proteina, $marca)) {
             $response["mensaje"] = "Guardado correctamente";
             $response["code"] = 201;
             http_response_code(201);
             echo json_encode($response);
         } else {
             $response["mensaje"] = "Ocurrió algún error al guardar";
-            $response["code"] = 500;
-            http_response_code(500);
+            $response["code"] = 200;
+            http_response_code(200);
             echo json_encode($response);
         }
     } else {
@@ -63,7 +68,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         echo json_encode($response);
     }
 
-} else if ($_SERVER['REQUEST_METHOD'] === 'PUT') {
+} /*else if ($_SERVER['REQUEST_METHOD'] === 'PUT') {
     $inputJSON = file_get_contents('php://input');
     $input = json_decode($inputJSON, TRUE);
 

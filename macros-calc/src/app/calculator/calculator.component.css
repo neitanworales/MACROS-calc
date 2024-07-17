@@ -34,10 +34,18 @@ tr.example-element-row:not(.example-expanded-row):active {
     overflow: hidden;
 }
 
-.list-group{
+.list-group {
     padding-top: 1em !important;
 }
 
 .mat-column-expandedDetail {
     background-color: gray;
+}
+
+table tr:hover {
+    background-color: #ddd;
+}
+
+.selected-row{
+    background-color: red;
 }

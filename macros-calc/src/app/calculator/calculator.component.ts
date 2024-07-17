@@ -13,21 +13,19 @@ import { DatePipe } from '@angular/common';
   providers: [DatePipe]
 })
 export class CalculatorComponent implements OnInit {
-
   foodBase!: Food;
   foodCalculated!: Food;
-
   foodsLista!: Food[];
-
   dataSource: any;
-
   searchByName?: string = "";
+  nuevo!: boolean;
 
   @ViewChild(MatPaginator, { static: true }) paginator!: MatPaginator;
 
   columnsToDisplay = [
     'seleccionar',
     'nombre',
+    'marca',
     'cantidad',
     'grasa',
     'carbohidrato',
@@ -47,7 +45,9 @@ export class CalculatorComponent implements OnInit {
     proteina: ['', Validators.required],
     cantidad: ['', Validators.required],
     unidad: [''],
-    calcNombre: ['']
+    calcNombre: [''],
+    calcMarca: [''],
+    marca: ['']
   });
 
   ngOnInit(): void {
@@ -55,6 +55,7 @@ export class CalculatorComponent implements OnInit {
     this.foodBase = new Food();
     this.foodCalculated = new Food();
     this.bloquerControles(false);
+    this.nuevo = false;
   }
 
   onSubmit() {
@@ -62,6 +63,7 @@ export class CalculatorComponent implements OnInit {
       return;
     } else {
       this.foodCalculated.nombre = this.foodBase.nombre;
+      this.foodCalculated.marca = this.foodBase.marca;
       this.foodCalculated.grasa = (this.foodBase.grasa * this.foodCalculated.cantidad) / this.foodBase.cantidad;
       this.foodCalculated.carbohidrato = (this.foodBase.carbohidrato * this.foodCalculated.cantidad) / this.foodBase.cantidad;
       this.foodCalculated.proteina = (this.foodBase.proteina * this.foodCalculated.cantidad) / this.foodBase.cantidad;
@@ -83,13 +85,13 @@ export class CalculatorComponent implements OnInit {
 
   seleccionar(selectedFood: Food) {
     this.foodBase = selectedFood;
-    console.log(this.foodBase);
     this.bloquerControles(true);
   }
 
   bloquerControles(disable: boolean) {
     if (disable) {
       this.foodForm.controls['nombre'].disable();
+      this.foodForm.controls['marca'].disable();
       this.foodForm.controls['base'].disable();
       this.foodForm.controls['unidad'].disable();
       this.foodForm.controls['grasa'].disable();
@@ -97,6 +99,7 @@ export class CalculatorComponent implements OnInit {
       this.foodForm.controls['proteina'].disable();
     } else {
       this.foodForm.controls['nombre'].enable();
+      this.foodForm.controls['marca'].enable();
       this.foodForm.controls['base'].enable();
       this.foodForm.controls['unidad'].enable();
       this.foodForm.controls['grasa'].enable();
@@ -113,8 +116,43 @@ export class CalculatorComponent implements OnInit {
           this.dataSource.paginator = this.paginator;
         }
       );
-    } if (event.target.value.length == 0){
+    } if (event.target.value.length == 0) {
       this.loadBaseFood();
+    }
+  }
+
+  activarFormNuevo() {
+    if (this.nuevo) { 
+      this.foodForm.controls['cantidad'].setValidators([Validators.required]);
+      this.foodForm.controls['cantidad'].updateValueAndValidity();
+      this.nuevo = false;
+    }
+    else {
+      this.bloquerControles(false);
+      this.foodBase = new Food();
+      this.foodForm.controls['cantidad'].setValidators([]);
+      this.foodForm.controls['cantidad'].updateValueAndValidity();
+      this.nuevo = true;
+    }
+  }
+
+  guardar() {
+    if (this.nuevo) {
+      if (!this.foodForm?.invalid) {
+        console.log(this.foodBase);
+        this.foodDao.guardar(this.foodBase).subscribe(
+          response => {
+          this.foodForm.controls['cantidad'].setValidators([Validators.required]);
+          this.foodForm.controls['cantidad'].updateValueAndValidity();
+          this.nuevo = false;
+          this.searchByName = "";
+          this.loadBaseFood();
+        });
+      } else {
+        console.log('form invalid');
+      }
+    } else {
+      console.log('necesita poner nuevo');
     }
   }
 }

@@ -5,6 +5,7 @@ import { Observable } from "rxjs";
 import { FoodResponse } from "../models/FoodResponse";
 import { Utils } from "./Utils";
 import { environment } from "src/environments/environment.development";
+import { Food } from "../models/Food";
 
 @Injectable()
 export class FoodDao {
@@ -18,5 +19,9 @@ export class FoodDao {
 
     public getSearch(text: string):Observable<FoodResponse> {
         return this.http.get<FoodResponse>(environment.apiUrl+'/food/search.php?text='+text, { headers: this.utils.getHeaders() });
+    }
+
+    public guardar(food: Food):Observable<FoodResponse> {
+        return this.http.post<FoodResponse>(environment.apiUrl+'/food/', food, { headers: this.utils.getHeaders() });
     }
 }
