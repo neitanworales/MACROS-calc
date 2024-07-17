@@ -6,15 +6,16 @@
             <table mat-table [dataSource]="dataSource!">
                 <ng-container matColumnDef="nombre">
                     <th mat-header-cell *matHeaderCellDef> Nombre
-                        <!--div class="input-group input-group-sm mb-3">
-                            <input type="text" class="form-control form-control-sm" [(ngModel)]="searchByName"
-                                placeholder="Buscar por nombre">
+                        <div class="input-group input-group-sm mb-3">
+                            <input type="text" class="form-control form-control-sm" formControlName="buscador" [(ngModel)]="searchByName"
+                                placeholder="Buscar por nombre" 
+                                (input)="search($event)">
                             <div class="input-group-append">
-                                <button class="btn btn-outline-secondary btn-sm" type="button" (click)="search()">
+                                <button class="btn btn-outline-secondary btn-sm" type="button" (click)="search($event)">
                                     <i class="bi bi-search"></i>
                                 </button>
                             </div>
-                        </div-->
+                        </div>
                     </th>
                     <td mat-cell *matCellDef="let element"> {{element.nombre}} </td>
                 </ng-container>

@@ -1,5 +1,5 @@
 export const environment = {
     production: false,
-    apiUrl: 'https://localhost:4200/'
+    apiUrl: 'https://www.neitanworales.com/api/macros'
   };
   

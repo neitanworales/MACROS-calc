@@ -1,5 +1,5 @@
 export const environment = {
     production: true,
-    apiUrl: 'www.neitanworales.com/'
+    apiUrl: 'https://www.neitanworales.com/api/macros'
   };
   

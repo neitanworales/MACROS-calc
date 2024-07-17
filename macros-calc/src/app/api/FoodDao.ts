@@ -12,7 +12,11 @@ export class FoodDao {
         private http: HttpClient,
         private utils: Utils){}
 
-    public getFoodsBase():Observable<FoodResponse>{
-        return this.http.get<FoodResponse>('/assets/data/data-food.json', { headers: this.utils.getHeaders() });
+    public getFoodsBase():Observable<FoodResponse> {
+        return this.http.get<FoodResponse>(environment.apiUrl+'/food/', { headers: this.utils.getHeaders() });
+    }
+
+    public getSearch(text: string):Observable<FoodResponse> {
+        return this.http.get<FoodResponse>(environment.apiUrl+'/food/search.php?text='+text, { headers: this.utils.getHeaders() });
     }
 }

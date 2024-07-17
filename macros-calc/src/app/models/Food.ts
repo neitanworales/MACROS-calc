@@ -7,4 +7,5 @@ export class Food {
     grasa: number = 0;
     carbohidrato: number = 0;
     proteina: number = 0;
+    marca!: string;
 }

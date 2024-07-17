@@ -14,12 +14,12 @@ import { DatePipe } from '@angular/common';
 })
 export class CalculatorComponent implements OnInit {
 
-  foodBase! : Food;
-  foodCalculated! : Food;
+  foodBase!: Food;
+  foodCalculated!: Food;
 
-  foodsLista! : Food[];
+  foodsLista!: Food[];
 
-  dataSource:any;
+  dataSource: any;
 
   searchByName?: string = "";
 
@@ -36,9 +36,10 @@ export class CalculatorComponent implements OnInit {
 
   constructor(private formBuilder: FormBuilder,
     private foodDao: FoodDao
-  ){}
+  ) { }
 
   foodForm = this.formBuilder.group({
+    buscador: [''],
     nombre: ['', Validators.required],
     base: ['', Validators.required],
     grasa: ['', Validators.required],
@@ -46,24 +47,24 @@ export class CalculatorComponent implements OnInit {
     proteina: ['', Validators.required],
     cantidad: ['', Validators.required],
     unidad: [''],
-    calcNombre : ['']
+    calcNombre: ['']
   });
 
   ngOnInit(): void {
     this.loadBaseFood();
     this.foodBase = new Food();
-    this.foodCalculated = new  Food();
+    this.foodCalculated = new Food();
     this.bloquerControles(false);
   }
 
-  onSubmit(){
+  onSubmit() {
     if (this.foodForm?.invalid) {
       return;
     } else {
       this.foodCalculated.nombre = this.foodBase.nombre;
-      this.foodCalculated.grasa = (this.foodBase.grasa * this.foodCalculated.cantidad)/this.foodBase.cantidad;
-      this.foodCalculated.carbohidrato = (this.foodBase.carbohidrato * this.foodCalculated.cantidad)/this.foodBase.cantidad;
-      this.foodCalculated.proteina = (this.foodBase.proteina * this.foodCalculated.cantidad)/this.foodBase.cantidad;
+      this.foodCalculated.grasa = (this.foodBase.grasa * this.foodCalculated.cantidad) / this.foodBase.cantidad;
+      this.foodCalculated.carbohidrato = (this.foodBase.carbohidrato * this.foodCalculated.cantidad) / this.foodBase.cantidad;
+      this.foodCalculated.proteina = (this.foodBase.proteina * this.foodCalculated.cantidad) / this.foodBase.cantidad;
     }
   }
 
@@ -71,23 +72,23 @@ export class CalculatorComponent implements OnInit {
     return this.foodForm?.controls;
   }
 
-  loadBaseFood(){
+  loadBaseFood() {
     this.foodDao.getFoodsBase().subscribe(
       result => {
-        this.dataSource = new MatTableDataSource<Food>(result.foods);
-        this.dataSource.paginator = this.paginator; 
+        this.dataSource = new MatTableDataSource<Food>(result.food);
+        this.dataSource.paginator = this.paginator;
       }
     );
   }
 
-  seleccionar(selectedFood: Food){
+  seleccionar(selectedFood: Food) {
     this.foodBase = selectedFood;
     console.log(this.foodBase);
     this.bloquerControles(true);
   }
 
-  bloquerControles(disable: boolean){
-    if(disable){
+  bloquerControles(disable: boolean) {
+    if (disable) {
       this.foodForm.controls['nombre'].disable();
       this.foodForm.controls['base'].disable();
       this.foodForm.controls['unidad'].disable();
@@ -104,7 +105,16 @@ export class CalculatorComponent implements OnInit {
     }
   }
 
-  search(){
-
+  search(event: any) {
+    if (event.target.value.length > 2) {
+      this.foodDao.getSearch(event.target.value).subscribe(
+        result => {
+          this.dataSource = new MatTableDataSource<Food>(result.food);
+          this.dataSource.paginator = this.paginator;
+        }
+      );
+    } if (event.target.value.length == 0){
+      this.loadBaseFood();
+    }
   }
 }

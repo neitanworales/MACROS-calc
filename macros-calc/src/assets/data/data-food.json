@@ -1,5 +1,5 @@
 {
-    "foods": [
+    "food": [
         {
             "nombre": "Zucaritas",
             "cantidad": "100",
@@ -28,9 +28,9 @@
             "nombre": "Pollo asado",
             "cantidad": "100",
             "unidad": "g",
-            "grasa": "13.49",
+            "grasa": "3.54",
             "carbohidrato": "0",
-            "proteina": "27.7"
+            "proteina": "30.76"
         },
         {
             "nombre": "Panini Español de Costco",
@@ -400,6 +400,46 @@
             "grasa": "2",
             "carbohidrato": "23",
             "proteina": "2"
+        },
+        {
+            "nombre": "Pam Bimbo",
+            "cantidad": "100",
+            "unidad": "g",
+            "grasa": "1.1",
+            "carbohidrato": "39.8",
+            "proteina": "14.5"
+        },
+        {
+            "nombre": "Habaneras",
+            "cantidad": "100",
+            "unidad": "g",
+            "grasa": "7.1",
+            "carbohidrato": "75.8",
+            "proteina": "9.2"
+        },
+        {
+            "nombre": "Yogurt",
+            "cantidad": "100",
+            "unidad": "g",
+            "grasa": "0",
+            "carbohidrato": "6.9",
+            "proteina": "5"
+        },
+        {
+            "nombre": "Jocoque",
+            "cantidad": "100",
+            "unidad": "g",
+            "grasa": "0",
+            "carbohidrato": "6.5",
+            "proteina": "7.3"
+        },
+        {
+            "nombre": "Cottage",
+            "cantidad": "100",
+            "unidad": "g",
+            "grasa": "3",
+            "carbohidrato": "1",
+            "proteina": "10"
         }
     ]
 }
