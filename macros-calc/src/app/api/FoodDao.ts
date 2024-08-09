@@ -1,5 +1,4 @@
-import { APP_BASE_HREF } from "@angular/common";
-import { Inject, Injectable } from "@angular/core";
+import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
 import { FoodResponse } from "../models/FoodResponse";
@@ -23,5 +22,14 @@ export class FoodDao {
 
     public guardar(food: Food):Observable<FoodResponse> {
         return this.http.post<FoodResponse>(environment.apiUrl+'/food/', food, { headers: this.utils.getHeaders() });
+    }
+
+    public calcular(foodBase: Food, foodCalculated: Food):Food {
+        foodCalculated.nombre = foodBase.nombre;
+        foodCalculated.marca = foodBase.marca;
+        foodCalculated.grasa = (foodBase.grasa * foodCalculated.cantidad) / foodBase.cantidad;
+        foodCalculated.carbohidrato = (foodBase.carbohidrato * foodCalculated.cantidad) / foodBase.cantidad;
+        foodCalculated.proteina = (foodBase.proteina * foodCalculated.cantidad) / foodBase.cantidad;
+        return foodCalculated;
     }
 }

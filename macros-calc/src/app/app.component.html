@@ -1,1 +1,15 @@
-<router-outlet></router-outlet>
+<app-header></app-header>
+<div class="container container-tabs">
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link {{this.router.url=='/calculator'?'active':''}}" routerLink="/calculator" >Calculadora</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link {{this.router.url=='/tabla-dinamica'?'active':''}}" routerLink="/tabla-dinamica">Tabla dinámica</a>
+        </li>
+    </ul>
+</div>
+<div class="container">
+    <router-outlet></router-outlet>
+</div>
+<app-footer></app-footer>

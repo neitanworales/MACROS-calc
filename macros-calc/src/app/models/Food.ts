@@ -9,4 +9,9 @@ export class Food {
     carbohidrato: number = 0;
     proteina: number = 0;
     marca!: string;
+
+    public get descripcion(): string {
+        return this.nombre + ' ' + this.marca;
+    }
+
 }

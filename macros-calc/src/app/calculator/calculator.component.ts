@@ -62,11 +62,7 @@ export class CalculatorComponent implements OnInit {
     if (this.foodForm?.invalid) {
       return;
     } else {
-      this.foodCalculated.nombre = this.foodBase.nombre;
-      this.foodCalculated.marca = this.foodBase.marca;
-      this.foodCalculated.grasa = (this.foodBase.grasa * this.foodCalculated.cantidad) / this.foodBase.cantidad;
-      this.foodCalculated.carbohidrato = (this.foodBase.carbohidrato * this.foodCalculated.cantidad) / this.foodBase.cantidad;
-      this.foodCalculated.proteina = (this.foodBase.proteina * this.foodCalculated.cantidad) / this.foodBase.cantidad;
+      this.foodCalculated = this.foodDao.calcular(this.foodBase,this.foodCalculated);
     }
   }
 

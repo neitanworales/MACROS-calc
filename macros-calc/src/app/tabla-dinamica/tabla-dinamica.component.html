@@ -1,0 +1,75 @@
+<form [formGroup]="foodForm">
+    <div class="row">
+        <div class="col">
+            <div class="input-group input-group-sm mb-3">
+                <input type="text" class="form-control form-control-sm" formControlName="nombre"
+                    placeholder="Buscar por nombre o marca" (input)="search($event)" list="datalistOptions"
+                    (change)="onProductChanged($event)">
+                <datalist id="datalistOptions">
+                    <option *ngFor="let f of datalistOptionsArray" value={{f.nombre}}>
+                </datalist>
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary btn-sm" type="button" (click)="search($event)">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </div>
+            </div>
+            <p><span>{{ (foodSelected?.nombre===null || foodSelected?.nombre === undefined) ? '' :
+                    (foodSelected?.nombre?.toString()+' - '+foodSelected?.marca?.toString())}}</span></p>
+        </div>
+        <div class="col">
+            <input type="number" class="form-control form-control-sm" formControlName="cantidad">
+        </div>
+        <div class="col">
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <button class="btn btn-sm btn-info" type="submit" id="button-addon2" (click)="onSubmit()">
+                    <i class="bi bi-plus-square"></i> Add</button>
+                <button class="btn btn-outline-secondary btn-sm" type="reset" (click)="onReset()">
+                    <i class="bi bi-x-circle-fill"></i> Reset</button>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <table mat-table [dataSource]="dataSource!">
+            <ng-container matColumnDef="nombre">
+                <th mat-header-cell *matHeaderCellDef> Nombre</th>
+                <td mat-cell *matCellDef="let element"> {{element.selected.nombre}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="marca">
+                <th mat-header-cell *matHeaderCellDef> Marca</th>
+                <td mat-cell *matCellDef="let element"> {{element.selected.marca}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="cantidad">
+                <th mat-header-cell *matHeaderCellDef> Cantidad</th>
+                <td mat-cell *matCellDef="let element"> {{element.calculated.cantidad | number}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="grasa">
+                <th mat-header-cell *matHeaderCellDef> grasa</th>
+                <td mat-cell *matCellDef="let element"> {{element.calculated.grasa | number}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="carbohidrato">
+                <th mat-header-cell *matHeaderCellDef> carbohidrato</th>
+                <td mat-cell *matCellDef="let element"> {{element.calculated.carbohidrato | number}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="proteina">
+                <th mat-header-cell *matHeaderCellDef> proteina</th>
+                <td mat-cell *matCellDef="let element"> {{element.calculated.proteina | number}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="controles">
+                <th mat-header-cell *matHeaderCellDef></th>
+                <td mat-cell *matCellDef="let element">
+                    <button type="button" class="btn btn-warning" (click)="remover(element)">Quitar</button>
+                </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+            <tr mat-row *matRowDef="let myRowData; columns: columnsToDisplay">
+        </table>
+    </div>
+</form>

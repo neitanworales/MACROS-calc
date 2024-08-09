@@ -13,13 +13,15 @@ import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
+import { TablaDinamicaComponent } from './tabla-dinamica/tabla-dinamica.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CalculatorComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    TablaDinamicaComponent
   ],
   imports: [
     HttpClientModule,

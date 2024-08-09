@@ -28,19 +28,19 @@ class MacrosDao
      */
     public function getFood()
     {
-        $que = "SELECT * FROM FOOD";
+        $que = "SELECT * FROM FOOD ORDER BY nombre";
         return $this->bd->ObtenerConsulta($que);
     }
 
     public function getFoodById($id)
     {
-        $que = "SELECT * FROM FOOD WHERE id=$id";
+        $que = "SELECT * FROM FOOD WHERE id=$id ORDER BY nombre";
         return $this->bd->ObtenerConsulta($que);
     }
 
     public function searchFood($text)
     {
-        $que = "SELECT * FROM FOOD WHERE nombre LIKE '%$text%'";
+        $que = "SELECT * FROM FOOD WHERE nombre LIKE '%$text%' OR marca LIKE '%$text%' ORDER BY nombre";
         return $this->bd->ObtenerConsulta($que);
     }
 
