@@ -16,6 +16,13 @@ export class TablaDinamicaComponent implements OnInit {
   foods?: FoodRow[];
   dataSource: any;
   currentProduct: string = "";
+  expandedFoodRow!: FoodRow;
+
+  grasas: number = 0;
+  carbos: number = 0;
+  protei: number = 0;
+
+  FOODS = "foods";
 
   constructor(private formBuilder: FormBuilder,
     private foodDao: FoodDao,
@@ -23,11 +30,18 @@ export class TablaDinamicaComponent implements OnInit {
 
   ngOnInit(): void {
     this.foods = new Array();
+    let foodos = JSON.parse(localStorage.getItem(this.FOODS)!);
+    if(foodos !== null && foodos !== undefined){
+      this.foods = foodos;
+    }
+    console.log(this.foods);
+    this.dataSource = new MatTableDataSource<FoodRow>(this.foods);
+    this.changeDetectorRefs.detectChanges();
+    this.sumar();
   }
 
   columnsToDisplay = [
     'nombre',
-    'marca',
     'cantidad',
     'grasa',
     'carbohidrato',
@@ -50,12 +64,13 @@ export class TablaDinamicaComponent implements OnInit {
           });
         }
       );
+    } else {
+      this.datalistOptionsArray = [];
     }
   }
 
-  onProductChanged(event: any) {
-    var productName = event.target.value
-    this.foodSelected = this.getSelectedProductByName(productName);
+  seleccionar(f: Food) {
+    this.foodSelected = f;
   }
 
   getSelectedProductByName(selectedName: string): Food {
@@ -63,7 +78,6 @@ export class TablaDinamicaComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.foodSelected);
     var foodRow = new FoodRow();
     foodRow.selected = this.foodSelected;
 
@@ -75,13 +89,10 @@ export class TablaDinamicaComponent implements OnInit {
     foodRow.calculated = foodCalculated;
 
     this.foods?.push(foodRow);
-
-    console.log("selected : " + foodRow.selected?.nombre);
-    console.log("calculated : " + foodRow.calculated.cantidad);
-
-    console.log(this.foods?.length);
     this.dataSource = new MatTableDataSource<FoodRow>(this.foods);
     this.changeDetectorRefs.detectChanges();
+    this.sumar();
+    this.guardarLS();
   }
 
   remover(foodRow: FoodRow) {
@@ -90,10 +101,31 @@ export class TablaDinamicaComponent implements OnInit {
       this.foods?.splice(index!, 1);
       this.dataSource = new MatTableDataSource<FoodRow>(this.foods);
       this.changeDetectorRefs.detectChanges();
+      this.sumar();
+      this.guardarLS();
     }
   }
 
   onReset() {
     this.foodSelected = undefined;
+    this.datalistOptionsArray = [];
+    this.foodForm.reset();
+  }
+
+  sumar() {
+    this.grasas = 0;
+    this.carbos = 0;
+    this.protei = 0;
+    this.foods?.forEach((f) => {
+      this.grasas += f.calculated?.grasa!;
+      this.carbos += f.calculated?.carbohidrato!;
+      this.protei += f.calculated?.proteina!;
+    });
+  }
+
+  guardarLS() {
+    let json = JSON.stringify(this.foods!);
+    console.log(json);
+    localStorage.setItem(this.FOODS, json);
   }
 }

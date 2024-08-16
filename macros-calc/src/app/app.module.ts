@@ -14,6 +14,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { TablaDinamicaComponent } from './tabla-dinamica/tabla-dinamica.component';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { TablaDinamicaComponent } from './tabla-dinamica/tabla-dinamica.componen
     BrowserAnimationsModule,
     MatTableModule,
     MatPaginatorModule,
-    FormsModule
+    FormsModule,
+    MatAutocompleteModule
   ],
   providers: [
     Utils,

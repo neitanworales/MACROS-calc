@@ -69,7 +69,7 @@
                         class="bi bi-floppy"></i></button>
             </div>
         </h2>
-        <div class="col-6">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
             <div class="form-group">
                 <label for="formInputNombre">Nombre</label>
                 <input type="text" class="form-control" id="formInputNombre" placeholder="Nombre"
@@ -77,14 +77,14 @@
                     [(ngModel)]="foodBase.nombre">
             </div>
         </div>
-        <div class="col-6">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
             <div class="form-group">
                 <label for="formInputNombre">Marca</label>
                 <input type="text" class="form-control" id="formInputMarca" placeholder="Marca" formControlName="marca"
                     [ngClass]="{'is-invalid': form['marca'].errors }" [(ngModel)]="foodBase.marca">
             </div>
         </div>
-        <div class="col-6">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
             <div class="form-group">
                 <label for="formInputBase">Cantidad Base</label>
                 <input type="number" class="form-control" id="formInputBase" placeholder="Cantidad Base"
@@ -92,28 +92,28 @@
                     [(ngModel)]="foodBase.cantidad">
             </div>
         </div>
-        <div class="col-6">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
             <div class="form-group">
                 <label for="formInputBase">Unidad</label>
                 <input type="text" class="form-control" id="formInputBase" placeholder="Unidad" formControlName="unidad"
                     [ngClass]="{'is-invalid': form['base'].errors }" [(ngModel)]="foodBase.unidad">
             </div>
         </div>
-        <div class="col">
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
             <div class="form-group">
                 <label for="formInputGrasa">Grasas</label>
                 <input type="number" class="form-control" id="formInputGrasa" placeholder="G" formControlName="grasa"
                     [ngClass]="{'is-invalid': form['grasa'].errors }" [(ngModel)]="foodBase.grasa">
             </div>
         </div>
-        <div class="col">
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
             <div class="form-group">
                 <label for="formInputCarbo">Carbohidratros</label>
                 <input type="number" class="form-control" id="formInputCarbo" placeholder="C" formControlName="carbo"
                     [ngClass]="{'is-invalid': form['carbo'].errors }" [(ngModel)]="foodBase.carbohidrato">
             </div>
         </div>
-        <div class="col">
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
             <div class="form-group">
                 <label for="formInputProt">Proteínas</label>
                 <input type="number" class="form-control" id="formInputProt" placeholder="P" formControlName="proteina"
@@ -133,35 +133,35 @@
                         class="bi bi-calculator"></i> Calcular</button>
             </div>
         </div>
-        <div class="col-6">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
             <div class="form-group">
                 <label for="formInputCalcNombre">Nombre</label>
                 <input type="text" class="form-control" id="formInputCalcNombre" placeholder="Nombre"
                     formControlName="calcNombre" [(ngModel)]="foodCalculated.nombre">
             </div>
         </div>
-        <div class="col-6">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
             <div class="form-group">
                 <label for="formInputCalcMarca">Marca</label>
                 <input type="text" class="form-control" id="formInputCalcMarca" placeholder="Marca"
                     formControlName="calcMarca" [(ngModel)]="foodCalculated.marca">
             </div>
         </div>
-        <div class="col-4">
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
             <div class="form-group">
                 <label for="formInputCalcGrasa">Grasas</label>
                 <label type="text" class="form-control" id="formInputCalcGrasa" placeholder="G">{{foodCalculated.grasa |
                     number }}</label>
             </div>
         </div>
-        <div class="col-4">
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
             <div class="form-group">
                 <label for="formInputCalcCarbo">Carbohidratros</label>
                 <label type="text" class="form-control" id="formInputCalcCarbo"
                     placeholder="C">{{foodCalculated.carbohidrato | number }}</label>
             </div>
         </div>
-        <div class="col-4">
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
             <div class="form-group">
                 <label for="formInputCalcProt">Proteínas</label>
                 <label type="text" class="form-control" id="formInputCalcProt" placeholder="P">{{foodCalculated.proteina
