@@ -27,6 +27,7 @@ export class FoodDao {
     public calcular(foodBase: Food, foodCalculated: Food):Food {
         foodCalculated.nombre = foodBase.nombre;
         foodCalculated.marca = foodBase.marca;
+        foodCalculated.unidad = foodBase.unidad;
         foodCalculated.grasa = (foodBase.grasa * foodCalculated.cantidad) / foodBase.cantidad;
         foodCalculated.carbohidrato = (foodBase.carbohidrato * foodCalculated.cantidad) / foodBase.cantidad;
         foodCalculated.proteina = (foodBase.proteina * foodCalculated.cantidad) / foodBase.cantidad;

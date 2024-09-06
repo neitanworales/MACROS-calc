@@ -133,39 +133,44 @@
                         class="bi bi-calculator"></i> Calcular</button>
             </div>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-            <div class="form-group">
-                <label for="formInputCalcNombre">Nombre</label>
-                <input type="text" class="form-control" id="formInputCalcNombre" placeholder="Nombre"
-                    formControlName="calcNombre" [(ngModel)]="foodCalculated.nombre">
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-            <div class="form-group">
-                <label for="formInputCalcMarca">Marca</label>
-                <input type="text" class="form-control" id="formInputCalcMarca" placeholder="Marca"
-                    formControlName="calcMarca" [(ngModel)]="foodCalculated.marca">
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-            <div class="form-group">
-                <label for="formInputCalcGrasa">Grasas</label>
-                <label type="text" class="form-control" id="formInputCalcGrasa" placeholder="G">{{foodCalculated.grasa |
-                    number }}</label>
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-            <div class="form-group">
-                <label for="formInputCalcCarbo">Carbohidratros</label>
-                <label type="text" class="form-control" id="formInputCalcCarbo"
-                    placeholder="C">{{foodCalculated.carbohidrato | number }}</label>
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-            <div class="form-group">
-                <label for="formInputCalcProt">Proteínas</label>
-                <label type="text" class="form-control" id="formInputCalcProt" placeholder="P">{{foodCalculated.proteina
-                    | number }}</label>
+    </div>
+    <div class="row">
+        <div class="alert alert-success" role="alert" style="margin-top: 1em;">
+            <h4 class="alert-heading">{{foodCalculated.nombre}}</h4>
+            <p>{{foodCalculated.marca}}</p>
+            <p>{{ foodCalculated.cantidad === undefined ? '' : foodCalculated.cantidad+' '+foodCalculated.unidad}}</p>
+            <hr>
+            <div class="row">
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" style="margin-top: 1em;">
+                    <div class="card border-primary">
+                        <div class="card-header">
+                            Grasas
+                        </div>
+                        <div class="card-body">
+                            <h1 class="display-6">{{foodCalculated.grasa | number}}</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" style="margin-top: 1em;">
+                    <div class="card border-success">
+                        <div class="card-header">
+                            Carbohidratos
+                        </div>
+                        <div class="card-body">
+                            <h1 class="display-6">{{foodCalculated.carbohidrato | number}}</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" style="margin-top: 1em;">
+                    <div class="card border-danger">
+                        <div class="card-header">
+                            Proteinas
+                        </div>
+                        <div class="card-body">
+                            <h1 class="display-6">{{foodCalculated.proteina | number}}</h1>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
