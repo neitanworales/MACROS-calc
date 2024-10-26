@@ -1,0 +1,445 @@
+{
+    "food": [
+        {
+            "nombre": "Zucaritas",
+            "cantidad": "100",
+            "unidad": "g",
+            "grasa": "0.8",
+            "carbohidrato": "89.9",
+            "proteina": "4.5"
+        },
+        {
+            "nombre": "Leche descremada LALA",
+            "cantidad": "250",
+            "unidad": "ml",
+            "grasa": "1.3",
+            "carbohidrato": "12",
+            "proteina": "7.8"
+        },
+        {
+            "nombre": "Plátano",
+            "cantidad": "100",
+            "unidad": "g",
+            "grasa": "0.3",
+            "carbohidrato": "21.1",
+            "proteina": "1.1"
+        },
+        {
+            "nombre": "Pollo asado",
+            "cantidad": "100",
+            "unidad": "g",
+            "grasa": "3.54",
+            "carbohidrato": "0",
+            "proteina": "30.76"
+        },
+        {
+            "nombre": "Panini Español de Costco",
+            "cantidad": "100",
+            "unidad": "g",
+            "grasa": "17.80",
+            "carbohidrato": "19",
+            "proteina": "17"
+        },
+        {
+            "nombre": "Apio",
+            "cantidad": "100",
+            "unidad": "g",
+            "grasa": "0",
+            "carbohidrato": "0",
+            "proteina": "1"
+        },
+        {
+            "nombre": "Galleta Principe",
+            "cantidad": "100",
+            "unidad": "g",
+            "grasa": "20.6",
+            "carbohidrato": "68.2",
+            "proteina": "5.3"
+        },
+        {
+            "nombre": "Jamón de pechuga de pavo San Rafael",
+            "cantidad": "100",
+            "unidad": "g",
+            "grasa": "0.9",
+            "carbohidrato": "8",
+            "proteina": "15.5"
+        },
+        {
+            "nombre": "Jamón de pierna de cerdo Santa Lucia YORK",
+            "cantidad": "100",
+            "unidad": "g",
+            "grasa": "1.31",
+            "carbohidrato": "3.22",
+            "proteina": "14.66"
+        },
+        {
+            "nombre": "Pan Bimbo Natural 2 Rebanadas",
+            "cantidad": "2",
+            "unidad": "pieza",
+            "grasa": "0.6",
+            "carbohidrato": "22",
+            "proteina": "8.1"
+        },
+        {
+            "nombre": "Mayonesa McCormick",
+            "cantidad": "100",
+            "unidad": "g",
+            "grasa": "81",
+            "carbohidrato": "2",
+            "proteina": "1.3"
+        },
+        {
+            "nombre": "Leche Almendra Silka Sin azucar",
+            "cantidad": "100",
+            "unidad": "ml",
+            "grasa": "0.9",
+            "carbohidrato": "0.4",
+            "proteina": "0.4"
+        },
+        {
+            "nombre": "Proteína Costco 2 medidas",
+            "cantidad": "2",
+            "unidad": "medida",
+            "grasa": "4.5",
+            "carbohidrato": "9",
+            "proteina": "21"
+        },
+        {
+            "nombre": "Nescafé de olla",
+            "cantidad": "1",
+            "unidad": "cucharada",
+            "grasa": "0.01",
+            "carbohidrato": "0.12",
+            "proteina": "0.11"
+        },
+        {
+            "nombre": "Tortillinas Tía Rosa",
+            "cantidad": "100",
+            "unidad": "g",
+            "grasa": "10.5",
+            "carbohidrato": "44.8",
+            "proteina": "7.7"
+        },
+        {
+            "nombre": "Huevo revuelto solo",
+            "cantidad": "50",
+            "unidad": "g",
+            "grasa": "4.8",
+            "carbohidrato": "0.4",
+            "proteina": "6.3"
+        },
+        {
+            "nombre": "Manzana Golden de Walmart",
+            "cantidad": "1",
+            "unidad": "pieza",
+            "grasa": "0.23",
+            "carbohidrato": "19.06",
+            "proteina": "0.36"
+        },
+        {
+            "nombre": "Bisctec de Res - Pulpa blanca",
+            "cantidad": "100",
+            "unidad": "g",
+            "grasa": "4.62",
+            "carbohidrato": "0",
+            "proteina": "21.91"
+        },
+        {
+            "nombre": "Nopal",
+            "cantidad": "100",
+            "unidad": "g",
+            "grasa": "0.1",
+            "carbohidrato": "3.3",
+            "proteina": "1.4"
+        },
+        {
+            "nombre": "Atún Aleta Amarilla Herdez",
+            "cantidad": "100",
+            "unidad": "g",
+            "grasa": "0",
+            "carbohidrato": "0",
+            "proteina": "19"
+        },
+        {
+            "nombre": "Aguacate",
+            "cantidad": "100",
+            "unidad": "g",
+            "grasa": "14.66",
+            "carbohidrato": "8.53",
+            "proteina": "2"
+        },
+        {
+            "nombre": "Frijoles Refritos",
+            "cantidad": "100",
+            "unidad": "g",
+            "grasa": "5.22",
+            "carbohidrato": "18.83",
+            "proteina": "6.29"
+        },
+        {
+            "nombre": "Pozole",
+            "cantidad": "300",
+            "unidad": "ml",
+            "grasa": "5",
+            "carbohidrato": "34",
+            "proteina": "13"
+        },
+        {
+            "nombre": "Queso Oaxaca",
+            "cantidad": "30",
+            "unidad": "g",
+            "grasa": "8.4",
+            "carbohidrato": "0.9",
+            "proteina": "6.9"
+        },
+        {
+            "nombre": "Crema Alpura",
+            "cantidad": "15",
+            "unidad": "g",
+            "grasa": "3.73",
+            "carbohidrato": "0.53",
+            "proteina": "0.35"
+        },
+        {
+            "nombre": "Tostadas charras",
+            "cantidad": "1",
+            "unidad": "pieza",
+            "grasa": "2.74",
+            "carbohidrato": "6.64",
+            "proteina": "0.74"
+        },
+        {
+            "nombre": "Tortilla",
+            "cantidad": "1",
+            "unidad": "pieza",
+            "grasa": "0.68",
+            "carbohidrato": "10.71",
+            "proteina": "1.37"
+        },
+        {
+            "nombre": "Crema de frijol",
+            "cantidad": "86",
+            "unidad": "g",
+            "grasa": "16",
+            "carbohidrato": "27",
+            "proteina": "18"
+        },
+        {
+            "nombre": "Chorizo",
+            "cantidad": "100",
+            "unidad": "g",
+            "grasa": "29.30",
+            "carbohidrato": "1.90",
+            "proteina": "21.18"
+        },
+        {
+            "nombre": "Carne de cerdo",
+            "cantidad": "100",
+            "unidad": "g",
+            "grasa": "17",
+            "carbohidrato": "0",
+            "proteina": "27.34"
+        },
+        {
+            "nombre": "Maiz pozolero",
+            "cantidad": "180",
+            "unidad": "g",
+            "grasa": "1.6",
+            "carbohidrato": "25.2",
+            "proteina": "2.7"
+        },
+        {
+            "nombre": "Gelatina D'Gari",
+            "cantidad": "130",
+            "unidad": "g",
+            "grasa": "0",
+            "carbohidrato": "11.5",
+            "proteina": "2.5"
+        },
+        {
+            "nombre": "Salmas",
+            "cantidad": "1",
+            "unidad": "pieza",
+            "grasa": "0.2",
+            "carbohidrato": "4.2",
+            "proteina": "0.5"
+        },
+        {
+            "nombre": "Pepino",
+            "cantidad": "250",
+            "unidad": "g",
+            "grasa": "0.4",
+            "carbohidrato": "5.4",
+            "proteina": "1.5"
+        },
+        {
+            "nombre": "Chayote",
+            "cantidad": "100",
+            "unidad": "g",
+            "grasa": "0.1",
+            "carbohidrato": "4.5",
+            "proteina": "0.8"
+        },
+        {
+            "nombre": "Espinaca",
+            "cantidad": "100",
+            "unidad": "g",
+            "grasa": "0.4",
+            "carbohidrato": "3.6",
+            "proteina": "2.9"
+        },
+        {
+            "nombre": "Zanahoria",
+            "cantidad": "100",
+            "unidad": "g",
+            "grasa": "0.24",
+            "carbohidrato": "9.58",
+            "proteina": "0.93"
+        },
+        {
+            "nombre": "Jitomate",
+            "cantidad": "100",
+            "unidad": "g",
+            "grasa": "0.2",
+            "carbohidrato": "3.92",
+            "proteina": "0.88"
+        },
+        {
+            "nombre": "Tomate Verde",
+            "cantidad": "100",
+            "unidad": "g",
+            "grasa": "0.2",
+            "carbohidrato": "5.1",
+            "proteina": "1.2"
+        },
+        {
+            "nombre": "Cebolla",
+            "cantidad": "100",
+            "unidad": "g",
+            "grasa": "0.1",
+            "carbohidrato": "9",
+            "proteina": "1.1"
+        },
+        {
+            "nombre": "Arroz Rojo",
+            "cantidad": "175",
+            "unidad": "g",
+            "grasa": "8.4",
+            "carbohidrato": "28.6",
+            "proteina": "3.3"
+        },
+        {
+            "nombre": "Espaguetti Verde",
+            "cantidad": "185",
+            "unidad": "g",
+            "grasa": "2.5",
+            "carbohidrato": "37.7",
+            "proteina": "7"
+        },
+        {
+            "nombre": "Chicharron en salsa roja",
+            "cantidad": "1",
+            "unidad": "g",
+            "grasa": "0.1",
+            "carbohidrato": "0.0",
+            "proteina": "0.2"
+        },
+        {
+            "nombre": "Carne de Pollo al Pastor",
+            "cantidad": "100",
+            "unidad": "g",
+            "grasa": "3",
+            "carbohidrato": "5.7",
+            "proteina": "15.8"
+        },
+        {
+            "nombre": "Pollo Rostizado",
+            "cantidad": "100",
+            "unidad": "g",
+            "grasa": "13.68",
+            "carbohidrato": "0",
+            "proteina": "29.9"
+        }
+        ,
+        {
+            "nombre": "Baguette",
+            "cantidad": "100",
+            "unidad": "g",
+            "grasa": "3",
+            "carbohidrato": "51.9",
+            "proteina": "8.8"
+        },
+        {
+            "nombre": "Clara de Huevo San Juan",
+            "cantidad": "100",
+            "unidad": "g",
+            "grasa": "0",
+            "carbohidrato": "1",
+            "proteina": "10"
+        },
+        {
+            "nombre": "Galleta Costco",
+            "cantidad": "1",
+            "unidad": "pieza",
+            "grasa": "11",
+            "carbohidrato": "27",
+            "proteina": "6.29"
+        },
+        {
+            "nombre": "Camote",
+            "cantidad": "100",
+            "unidad": "g",
+            "grasa": "0.1",
+            "carbohidrato": "20",
+            "proteina": "1.6"
+        },
+        {
+            "nombre": "Galleta Maria",
+            "cantidad": "29",
+            "unidad": "g",
+            "grasa": "2",
+            "carbohidrato": "23",
+            "proteina": "2"
+        },
+        {
+            "nombre": "Pam Bimbo",
+            "cantidad": "100",
+            "unidad": "g",
+            "grasa": "1.1",
+            "carbohidrato": "39.8",
+            "proteina": "14.5"
+        },
+        {
+            "nombre": "Habaneras",
+            "cantidad": "100",
+            "unidad": "g",
+            "grasa": "7.1",
+            "carbohidrato": "75.8",
+            "proteina": "9.2"
+        },
+        {
+            "nombre": "Yogurt",
+            "cantidad": "100",
+            "unidad": "g",
+            "grasa": "0",
+            "carbohidrato": "6.9",
+            "proteina": "5"
+        },
+        {
+            "nombre": "Jocoque",
+            "cantidad": "100",
+            "unidad": "g",
+            "grasa": "0",
+            "carbohidrato": "6.5",
+            "proteina": "7.3"
+        },
+        {
+            "nombre": "Cottage",
+            "cantidad": "100",
+            "unidad": "g",
+            "grasa": "3",
+            "carbohidrato": "1",
+            "proteina": "10"
+        }
+    ]
+}
